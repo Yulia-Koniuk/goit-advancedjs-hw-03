@@ -1,0 +1,82 @@
+/* Styles for Mobile devices */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+  transition: transform 250ms ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.04);
+}
+
+.gallery-link {
+  display: block;
+  line-height: 0;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  padding: 4px 20px 0;
+  box-sizing: border-box;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.info-item b {
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .gallery-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+  .gallery-item {
+    width: 360px;
+  }
+}
+
+/* SimpleLightbox modal (overrides library styles) */
+body .sl-overlay {
+  background-color: #2e2f42;
+}
+
+body .sl-wrapper .sl-close,
+body .sl-wrapper .sl-counter,
+body .sl-wrapper .sl-navigation button {
+  color: #ffffff;
+}
